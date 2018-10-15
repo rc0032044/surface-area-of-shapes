@@ -60,6 +60,8 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,6 +83,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Cube";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -90,6 +93,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Cylinder";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -204,7 +208,7 @@
             // areaAndVolumeToolStripMenuItem1
             // 
             this.areaAndVolumeToolStripMenuItem1.Name = "areaAndVolumeToolStripMenuItem1";
-            this.areaAndVolumeToolStripMenuItem1.Size = new System.Drawing.Size(164, 22);
+            this.areaAndVolumeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.areaAndVolumeToolStripMenuItem1.Text = "Area and volume";
             this.areaAndVolumeToolStripMenuItem1.Click += new System.EventHandler(this.areaAndVolumeToolStripMenuItem1_Click);
             // 
@@ -342,11 +346,29 @@
             this.label8.Size = new System.Drawing.Size(0, 13);
             this.label8.TabIndex = 23;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(492, 91);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 13);
+            this.label9.TabIndex = 24;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(535, 99);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 13);
+            this.label10.TabIndex = 25;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
@@ -415,6 +437,8 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.ToolStripMenuItem areaAndVolumeToolStripMenuItem2;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
 

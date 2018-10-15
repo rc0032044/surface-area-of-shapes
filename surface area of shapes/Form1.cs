@@ -113,5 +113,48 @@ namespace surface_area_of_shapes
             }
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            double d1 = Convert.ToDouble(textBox2.Text);
+            if (comboBox2.SelectedIndex == 0)
+            {
+                d1 = ((d1 * d1) * 6);
+                label9.Text = d1.ToString();
+            }
+            else if (comboBox2.SelectedIndex == 1)
+            {
+                d1 = (d1 * d1 * d1);
+                label9.Text = d1.ToString();
+            }
+            else
+            {
+                MessageBox.Show("please select a function fron the drop down menu!!");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            double d1 = Convert.ToDouble(textBox2.Text);
+            if (comboBox3.SelectedIndex == 0)
+            {
+                d1 = ((d1 * d1) * 6);
+                label10.Text = d1.ToString();
+            }
+            else if (comboBox3.SelectedIndex == 1)
+            {
+                d1 = (d1 * d1 * d1);
+                label10.Text = d1.ToString();
+            }
+            else
+            {
+                MessageBox.Show("please select a function fron the drop down menu!!");
+            }
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
