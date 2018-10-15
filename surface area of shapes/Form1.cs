@@ -47,6 +47,9 @@ namespace surface_area_of_shapes
             label6.Hide();
             label7.Hide();
             label8.Hide();
+            label9.Hide();
+            label10.Hide();
+            label11.Hide();
             textBox1.Hide();
             textBox2.Hide();
             textBox3.Hide();
@@ -66,6 +69,7 @@ namespace surface_area_of_shapes
             hideEverything();
             button2.Show();
             label2.Show();
+            label9.Show();
             textBox2.Show();
             comboBox2.Show();
         }
@@ -76,6 +80,7 @@ namespace surface_area_of_shapes
             button3.Show();
             label3.Show();
             label4.Show();
+            label10.Show();
             textBox4.Show();
             textBox3.Show();
             comboBox3.Show();
@@ -88,6 +93,7 @@ namespace surface_area_of_shapes
             label5.Show();
             label6.Show();
             label7.Show();
+            label11.Show();
             textBox5.Show();
             textBox6.Show();
             textBox7.Show();
@@ -135,15 +141,16 @@ namespace surface_area_of_shapes
 
         private void button3_Click(object sender, EventArgs e)
         {
-            double d1 = Convert.ToDouble(textBox2.Text);
+            double d1 = Convert.ToDouble(textBox3.Text);
+            double d2 = Convert.ToDouble(textBox4.Text);
             if (comboBox3.SelectedIndex == 0)
             {
-                d1 = ((d1 * d1) * 6);
+                d1 = ((2 * Math.PI * d1 * d2) + (2 * Math.PI * (d1 * d1)) );
                 label10.Text = d1.ToString();
             }
             else if (comboBox3.SelectedIndex == 1)
             {
-                d1 = (d1 * d1 * d1);
+                d1 = (Math.PI * (d1 *d1) * d2);
                 label10.Text = d1.ToString();
             }
             else
@@ -152,9 +159,25 @@ namespace surface_area_of_shapes
             }
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-
+            double d1 = Convert.ToDouble(textBox5.Text);
+            double d2 = Convert.ToDouble(textBox6.Text);
+            double d3 = Convert.ToDouble(textBox7.Text);
+            if (comboBox2.SelectedIndex == 0)
+            {
+                d1 = ((2 * (d1 * d2)) + (2 * (d1 * d3)) + (2 *(d2 * d3)));
+                label11.Text = d1.ToString();
+            }
+            else if (comboBox2.SelectedIndex == 1)
+            {
+                d1 = (d1 * d2 * d3);
+                label11.Text = d1.ToString();
+            }
+            else
+            {
+                MessageBox.Show("please select a function fron the drop down menu!!");
+            }
         }
     }
 }
